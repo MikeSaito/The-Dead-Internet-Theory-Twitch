@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Bot Detector",
+  "version": "1.0.0",
+  "description": "Помечает подозрительные ники в чате Twitch",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://www.twitch.tv/*"],
+      "js": ["detector.js", "content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
